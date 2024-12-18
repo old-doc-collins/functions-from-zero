@@ -12,3 +12,8 @@ for a, b in fates.items():
     print('You want %s, but you will know %s.' % (a, b))
 
 
+
+
+def square(x):
+    return x * x
+    
