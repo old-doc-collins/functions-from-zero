@@ -1,16 +1,12 @@
-inevitabilities = ['cold', 'hunger', 'sickness', 'deprivation', 'death']
+inevitabilities = ["cold", "hunger", "sickness", "deprivation", "death"]
 for thing in inevitabilities:
-    print('You are doomed to experience %s.' % thing)
+    print("You are doomed to experience %s." % thing)
 
-fates = {
-    'health': 'disease',
-    'satiety': 'famine',
-    'comfort': 'cruelty'
-}
+fates = {"health": "disease", "satiety": "famine", "comfort": "cruelty"}
 
 for a, b in fates.items():
-    print('You want %s, but you will know %s.' % (a, b))
+    print("You want %s, but you will know %s." % (a, b))
+
 
 def square(x):
     return x * x
- 
