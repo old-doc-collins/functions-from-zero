@@ -1,6 +1,6 @@
-all: install lint test
+all: setup lint test
 
-install:
+setup:
 	pip install -r requirements.txt
 
 test:
