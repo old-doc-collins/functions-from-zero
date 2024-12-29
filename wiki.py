@@ -5,7 +5,7 @@ import click
 @click.command()
 @click.option('--name', default='wikipedia', help='entry to look up.')
 @click.option('--length', default=1, help='number of sentences.')
-def scrape(name, length):
+def scrape(name='wikipedia', length=1):
     try:
         result = wikipedia.summary(name, sentences=length)
     except PageError:
