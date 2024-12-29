@@ -1,16 +1,15 @@
-import wikipedia
-from wikipedia import PageError
+from mylib.wikistuff import scrape
+import click
+
+@click.command()
+@click.option('--name', prompt='entry', help='entry to look up.')
+@click.option('--length', default=1, help='number of sentences.')
+def run(name, length=1):
+    result = scrape(name, length)
+    print(result)
+
+if __name__ == '__main__':
+    run()
 
 
-def scrape(name, length=1):
-    try:
-        result = wikipedia.summary(name, sentences=length)
-    except PageError:
-        result = None
-    return result
 
-
-print(scrape('calculus', length=3))
-
-r = scrape('blargblumpf')
-print(r)
